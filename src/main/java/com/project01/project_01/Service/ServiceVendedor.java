@@ -27,13 +27,9 @@ public class ServiceVendedor {
 
 
     // *Posteriormente melhorar a mensagem de erro
-    public boolean encontra_vendedor(Vendedor v, List<Vendedor> colunm_vendedor) {
-        // retorna falso se a coluna não conter vendedores
-        if (colunm_vendedor.size() == 0) {
-            return false;
-        }
+    public boolean encontra_vendedor(long id , List<Vendedor> colunm_vendedor) {
         for (Vendedor vv : colunm_vendedor) {
-            if (vv.getId().equals(v.getId())) {
+            if (vv.getId().equals(id)) {
                 return true;
             }
         }
@@ -42,9 +38,9 @@ public class ServiceVendedor {
     }
 
     // GET
-    public Object Busca_vendedor(Vendedor v) {
-        if (encontra_vendedor(v, repositorio_vendedor.findAll())) {
-            return repositorio_vendedor.findById(v.getId());
+    public Object Busca_vendedor(long id) {
+        if (encontra_vendedor(id, repositorio_vendedor.findAll())) {
+            return repositorio_vendedor.findById(id);
         }
         return null;
     }

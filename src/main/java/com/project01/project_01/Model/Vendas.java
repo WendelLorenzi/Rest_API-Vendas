@@ -1,5 +1,7 @@
 package com.project01.project_01.Model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -18,10 +20,10 @@ public class Vendas {
     @Column(nullable = false)
     private float valor;
 
-    // Uma venda é feita por apenas um vendedor
-    @ManyToOne
-    @JoinColumn(name = "vendedor_id", referencedColumnName = "id")
-    private Vendedor vendedor_id;
+    // Uma venda é feita por apenas um vendedor e um vendedor pode fazer varias vendas
+    @JoinColumn(name = "vendedorID", referencedColumnName = "id")
+    private Long vendedor_id;
+
 
     public Long getId() {
         return id;
@@ -47,11 +49,11 @@ public class Vendas {
         this.valor = valor;
     }
 
-    public Vendedor getVendedor() {
+    public Long getVendedor_id() {
         return vendedor_id;
     }
 
-    public void setVendedor(Vendedor vendedor) {
-        this.vendedor_id = vendedor;
+    public void setVendedor_id(Long vendedor_id) {
+        this.vendedor_id = vendedor_id;
     }
 }

@@ -2,6 +2,7 @@ package com.project01.project_01.Model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -12,8 +13,9 @@ public class Vendedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     private String nome;
+
 
     public Long getId() {
         return id;
