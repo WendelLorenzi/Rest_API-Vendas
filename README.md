@@ -10,7 +10,7 @@ Rest API desenvolvida com Spring Boot utilizando banco de dados in-memory H2
 
 <h4>Erro/ Impedimento:</h4>
   - JSON com as datas não são aceitos em localhost:8080/relatorio pois aponta erro no método relatorio() quando passado os parametros no ControllerRelatorioVendedor.java o mesmo cai em uma Exception <br>
-  - Na classe ServiceVendedorVenda.java o método Contadia(Date, Date) aponta erro no .parse() que converteria a data passada para um Date formatado <br>
+  - Na classe ServiceVendedorVenda.java o método ContaDias(Date, Date) aponta erro no .parse() que converteria a data passada para um Date formatado <br>
   - Não foi implementado testes automatizados <br>
   
 
