@@ -9,7 +9,8 @@ Rest API desenvolvida com Spring Boot utilizando banco de dados in-memory H2
 
 
 <h4>Erro/ Impedimento:</h4>
-  - JSON com as datas não são aceitos em localhost:8080/relatorio pois aponta erro no metodo relatorio() quando passado os parametros no ControllerRelatorioVendedor o mesmo cai em uma Exception
+  - JSON com as datas não são aceitos em localhost:8080/relatorio pois aponta erro no método relatorio() quando passado os parametros no ControllerRelatorioVendedor.java o mesmo cai em uma Exception
+  - Na classe ServiceVendedorVenda.java o método Contadia(Date, Date) aponta erro no .parse() que converteria a data passada para um Date formatado
   
 
 <h4>Dados inseridos para teste: </h4>
@@ -19,7 +20,7 @@ Rest API desenvolvida com Spring Boot utilizando banco de dados in-memory H2
 {"nome": "Julio Cesar"}, <br>
 {"nome": "Jaqueline Amaral"} <br>
 
-<h5>Vendas: </h5> localhost:8080/venda<br>
+<h5>Vendas: </h5> --> localhost:8080/venda<br>
 {"data": "2020-09-10", "valor": "550.5", "vendedor_id": "2"},<br>
 {"data": "2020-05-12", "valor": "200.5", "vendedor_id": "1"},<br>
 {"data": "2020-10-10", "valor": "300.0", "vendedor_id": "2"},<br>
