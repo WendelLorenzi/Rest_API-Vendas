@@ -13,7 +13,7 @@ Rest API desenvolvida com Spring Boot utilizando banco de dados in-memory H2
   - Na classe ServiceVendedorVenda.java o método Contadia(Date, Date) aponta erro no .parse() que converteria a data passada para um Date formatado
   
 
-<h4>Dados inseridos para teste: </h4>
+<h4>Dados inseridos para teste: </h4> (Usando o Postman)
 
 <h5>Vendedor: </h5>  ---> localhost:8080/vendedor <br>
 {"nome": "Rafael Souza"}, <br>
